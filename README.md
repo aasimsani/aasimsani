@@ -1,8 +1,24 @@
 # Aasim Sani
 
+<!-- OPTION A: Capsule Render wave header (replace the # above with this) -->
+<!-- <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,100:16213e&height=200&section=header&text=Aasim%20Sani&fontSize=50&fontColor=ffffff&animation=fadeIn&fontAlignY=35" width="100%" /> -->
+
+<!-- OPTION B: Capsule Render cylinder header -->
+<!-- <img src="https://capsule-render.vercel.app/api?type=cylinder&color=0:1a1a2e,100:16213e&text=Aasim%20Sani&fontColor=ffffff&fontSize=40&height=150&fontAlignY=45&animation=scaleIn" width="100%" /> -->
+
 [![Website](https://img.shields.io/badge/aasimsani.net-000?style=flat&logo=safari&logoColor=white)](https://aasimsani.net)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/aasimsani)
 [![Twitter](https://img.shields.io/badge/@aasimsani-1DA1F2?style=flat&logo=twitter&logoColor=white)](https://twitter.com/aasimsani)
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- WIDGET 1: Typing SVG — animated rotating taglines     -->
+<!-- ═══════════════════════════════════════════════════════ -->
+
+<p align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com/?lines=Building+Taxwire+%F0%9F%9A%80;Making+complex+things+simple;Into+AI+%26+hard+problems;Ex-professional+cyclist+%F0%9F%9A%B4;Certified+mountaineer+%F0%9F%8F%94%EF%B8%8F;Semi-pro+gamer+%F0%9F%8E%AE&font=Fira+Code&center=true&width=500&height=45&color=36BCF7&duration=3000&pause=1000" alt="Typing SVG" />
+  </a>
+</p>
 
 ## About Me
 
@@ -10,3 +26,49 @@
 - Previously co-founded [Orai](https://www.orai.com) (AI speech coach, 500k+ users, Forbes 30 Under 30) and [CopyCat](https://copycat.dev) (Figma → React, 20k+ users)
 - Into AI, hard problems, and making complex things simple
 - Ex-professional cyclist, certified mountaineer, semi-pro gamer, occasional musician
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- WIDGET 2: Snake animation — eats your contribution    -->
+<!-- graph. Requires GitHub Action (see .github/workflows) -->
+<!-- ═══════════════════════════════════════════════════════ -->
+
+## Contributions
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="dist/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="dist/github-snake.svg" />
+  <img alt="github contribution snake animation" src="dist/github-snake.svg" width="100%" />
+</picture>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- WIDGET 3: 3D Contribution Skyline/City                -->
+<!-- Requires GitHub Action (see .github/workflows)        -->
+<!-- ═══════════════════════════════════════════════════════ -->
+
+## GitHub Skyline
+
+<!-- Night view (great for dark mode profiles) -->
+![3D Contribution Skyline](./profile-3d-contrib/profile-night-view.svg)
+
+<!-- Alternative styles (uncomment to try): -->
+<!-- ![Green animate](./profile-3d-contrib/profile-green-animate.svg) -->
+<!-- ![Season](./profile-3d-contrib/profile-season-animate.svg) -->
+<!-- ![Night rainbow](./profile-3d-contrib/profile-night-rainbow.svg) -->
+<!-- ![Gitblock (Minecraft-style!)](./profile-3d-contrib/profile-gitblock.svg) -->
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- WIDGET 4: Goodreads — auto-updated reading list       -->
+<!-- Requires GitHub Action (see .github/workflows)        -->
+<!-- ═══════════════════════════════════════════════════════ -->
+
+## Currently Reading 📚
+
+<!-- GOODREADS:START -->
+<!-- This section auto-updates via GitHub Action -->
+<!-- GOODREADS:END -->
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- BONUS: Capsule Render footer wave                     -->
+<!-- ═══════════════════════════════════════════════════════ -->
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,100:16213e&height=120&section=footer" width="100%" />

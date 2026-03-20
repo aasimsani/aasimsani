@@ -1,0 +1,21 @@
+name: Update Goodreads Reading List
+
+on:
+  schedule:
+    - cron: "0 0 * * 0" # weekly on Sunday
+  workflow_dispatch: # manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  update-reading-list:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: gautamkrishnar/blog-post-workflow@v1
+        with:
+          comment_tag_name: "GOODREADS"
+          feed_list: "https://www.goodreads.com/review/list_rss/67959119?shelf=currently-reading"
+          max_post_count: 5
