@@ -40,12 +40,8 @@
   <img alt="snake eating my contributions" src="dist/dark-ocean.gif" width="100%" />
 </picture>
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=aasimsani&theme=transparent&hide_border=true&hide_current_streak=true&hide_longest_streak=true&ring=2196f3&fire=ff9640&sideLabels=8dbdff&sideNums=ffffff&dates=8dbdff" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=aasimsani&theme=transparent&hide_border=true&hide_current_streak=true&hide_longest_streak=true&ring=1a6fb5&fire=ff9640&sideLabels=4b91f1&sideNums=0d2847&dates=4b91f1" />
-    <img alt="total contributions" src="https://github-readme-streak-stats.herokuapp.com/?user=aasimsani&theme=transparent&hide_border=true&hide_current_streak=true&hide_longest_streak=true&ring=2196f3&fire=ff9640&sideLabels=8dbdff&sideNums=ffffff&dates=8dbdff" width="25%" />
-  </picture>
+<p align="right">
+  <img src="https://img.shields.io/badge/contributions-4%2C220-2196f3?style=flat-square&labelColor=0d1117" alt="contributions" />
 </p>
 
 <!-- ═══════════════════════════════════════════════════════ -->
