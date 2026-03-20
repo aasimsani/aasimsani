@@ -23,7 +23,7 @@
 ## About Me
 
 - Founding Engineer at [Taxwire](https://taxwire.com) — building a sales tax engine
-- Previously co-founded [Orai](https://www.orai.com) (AI speech coach, 500k+ users, Forbes 30 Under 30) and [CopyCat](https://copycat.dev) (Figma → React, 20k+ users)
+- Previously co-founded [Orai](https://www.orai.com) (AI speech coach, 1M+ users, Forbes 30 Under 30) and [CopyCat](https://copycat-site.webflow.io/) (Figma → React, 20k+ users)
 - Into AI, philosophy, food and making complex things simple
 - Ex-professional cyclist, certified mountaineer, semi-pro gamer, occasional musician
 
