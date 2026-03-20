@@ -21,6 +21,7 @@ jobs:
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
             dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
+            dist/dark-ocean.gif?color_snake=#ff9640&color_dots=#0a1929,#0d2847,#114976,#1a6fb5,#2196f3&color_background=#0d1117&color_dot_border=#0d111700
 
       - name: Commit & Push
         run: |
