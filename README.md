@@ -40,6 +40,14 @@
   <img alt="snake eating my contributions" src="dist/dark-ocean.gif" width="100%" />
 </picture>
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=aasimsani&theme=transparent&hide_border=true&ring=2196f3&fire=ff9640&currStreakLabel=2196f3&sideLabels=8dbdff&sideNums=ffffff&currStreakNum=ffffff&dates=8dbdff" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=aasimsani&theme=transparent&hide_border=true&ring=1a6fb5&fire=ff9640&currStreakLabel=1a6fb5&sideLabels=4b91f1&sideNums=0d2847&currStreakNum=0d2847&dates=4b91f1" />
+    <img alt="contribution streak" src="https://github-readme-streak-stats.herokuapp.com/?user=aasimsani&theme=transparent&hide_border=true&ring=2196f3&fire=ff9640&currStreakLabel=2196f3&sideLabels=8dbdff&sideNums=ffffff&currStreakNum=ffffff&dates=8dbdff" width="70%" />
+  </picture>
+</p>
+
 <!-- ═══════════════════════════════════════════════════════ -->
 <!-- WIDGET 4: Goodreads — auto-updated reading list       -->
 <!-- Requires GitHub Action (see .github/workflows)        -->
@@ -56,4 +64,4 @@
 <!-- BONUS: Capsule Render footer wave                     -->
 <!-- ═══════════════════════════════════════════════════════ -->
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,100:16213e&height=120&section=footer" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2a4a7f,100:1a6fb5&height=120&section=footer" width="100%" />
