@@ -16,7 +16,7 @@
 
 <p align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com/?lines=Building+Taxwire+%F0%9F%9A%80;Making+complex+things+simple;Into+AI+%26+hard+problems;Ex-professional+cyclist+%F0%9F%9A%B4;Certified+mountaineer+%F0%9F%8F%94%EF%B8%8F;Semi-pro+gamer+%F0%9F%8E%AE&font=Fira+Code&center=true&width=500&height=45&color=36BCF7&duration=3000&pause=1000" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com/?lines=2x+Founder;Building+Taxwire;Foodie;Bookworm;Cyclist;Occasionally+creating+stakeholder+value&font=Fira+Code&center=true&width=500&height=45&color=36BCF7&duration=3000&pause=1000" alt="Typing SVG" />
   </a>
 </p>
 
