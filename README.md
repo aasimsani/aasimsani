@@ -41,7 +41,9 @@
 </picture>
 
 <p align="right">
-  <img src="https://img.shields.io/badge/contributions-4%2C220-2196f3?style=flat-square&labelColor=0d1117" alt="contributions" />
+  <!-- SNAKE_DATES:START -->
+  <sub>Mar 2025 – Mar 2026</sub>
+  <!-- SNAKE_DATES:END -->
 </p>
 
 <!-- ═══════════════════════════════════════════════════════ -->
