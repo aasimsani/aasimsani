@@ -34,15 +34,7 @@
 
 ## Contributions
 
-<!-- Default: dark/light mode adaptive SVG -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="dist/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="dist/github-snake.svg" />
-  <img alt="github contribution snake animation" src="dist/github-snake.svg" width="100%" />
-</picture>
-
-<!-- Alternative: Ocean-themed GIF with orange snake (uncomment to swap) -->
-<!-- <img src="dist/ocean.gif" alt="ocean snake animation" width="100%" /> -->
+<img src="dist/ocean.gif" alt="ocean snake animation" width="100%" />
 
 <!-- ═══════════════════════════════════════════════════════ -->
 <!-- WIDGET 4: Goodreads — auto-updated reading list       -->
