@@ -34,7 +34,11 @@
 
 ## Contributions
 
-<img src="dist/ocean.gif" alt="ocean snake animation" width="100%" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="dist/dark-ocean.gif" />
+  <source media="(prefers-color-scheme: light)" srcset="dist/ocean.gif" />
+  <img alt="snake eating my contributions" src="dist/dark-ocean.gif" width="100%" />
+</picture>
 
 <!-- ═══════════════════════════════════════════════════════ -->
 <!-- WIDGET 4: Goodreads — auto-updated reading list       -->
