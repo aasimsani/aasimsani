@@ -42,9 +42,9 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=aasimsani&theme=transparent&hide_border=true&ring=2196f3&fire=ff9640&currStreakLabel=2196f3&sideLabels=8dbdff&sideNums=ffffff&currStreakNum=ffffff&dates=8dbdff" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=aasimsani&theme=transparent&hide_border=true&ring=1a6fb5&fire=ff9640&currStreakLabel=1a6fb5&sideLabels=4b91f1&sideNums=0d2847&currStreakNum=0d2847&dates=4b91f1" />
-    <img alt="contribution streak" src="https://github-readme-streak-stats.herokuapp.com/?user=aasimsani&theme=transparent&hide_border=true&ring=2196f3&fire=ff9640&currStreakLabel=2196f3&sideLabels=8dbdff&sideNums=ffffff&currStreakNum=ffffff&dates=8dbdff" width="45%" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=aasimsani&theme=transparent&hide_border=true&hide_current_streak=true&hide_longest_streak=true&ring=2196f3&fire=ff9640&sideLabels=8dbdff&sideNums=ffffff&dates=8dbdff" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=aasimsani&theme=transparent&hide_border=true&hide_current_streak=true&hide_longest_streak=true&ring=1a6fb5&fire=ff9640&sideLabels=4b91f1&sideNums=0d2847&dates=4b91f1" />
+    <img alt="total contributions" src="https://github-readme-streak-stats.herokuapp.com/?user=aasimsani&theme=transparent&hide_border=true&hide_current_streak=true&hide_longest_streak=true&ring=2196f3&fire=ff9640&sideLabels=8dbdff&sideNums=ffffff&dates=8dbdff" width="25%" />
   </picture>
 </p>
 
