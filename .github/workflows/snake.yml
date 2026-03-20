@@ -23,11 +23,17 @@ jobs:
             dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
             dist/dark-ocean.gif?color_snake=#ff9640&color_dots=#0a1929,#0d2847,#114976,#1a6fb5,#2196f3&color_background=#0d1117&color_dot_border=#0d111700
 
+      - name: Update date range in README
+        run: |
+          END_DATE=$(date +"%b %Y")
+          START_DATE=$(date -d "1 year ago" +"%b %Y" 2>/dev/null || date -v-1y +"%b %Y")
+          sed -i "s|<!-- SNAKE_DATES:START -->.*<!-- SNAKE_DATES:END -->|<!-- SNAKE_DATES:START --><sub>${START_DATE} – ${END_DATE}</sub><!-- SNAKE_DATES:END -->|" README.md
+
       - name: Commit & Push
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add dist/
+          git add dist/ README.md
           if git commit -m "chore: update snake animation"; then
             git pull --rebase
             git push
