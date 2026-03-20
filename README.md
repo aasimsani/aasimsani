@@ -34,27 +34,15 @@
 
 ## Contributions
 
+<!-- Default: dark/light mode adaptive SVG -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="dist/github-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="dist/github-snake.svg" />
   <img alt="github contribution snake animation" src="dist/github-snake.svg" width="100%" />
 </picture>
 
-<!-- ═══════════════════════════════════════════════════════ -->
-<!-- WIDGET 3: 3D Contribution Skyline/City                -->
-<!-- Requires GitHub Action (see .github/workflows)        -->
-<!-- ═══════════════════════════════════════════════════════ -->
-
-## GitHub Skyline
-
-<!-- Night view (great for dark mode profiles) -->
-![3D Contribution Skyline](./profile-3d-contrib/profile-night-view.svg)
-
-<!-- Alternative styles (uncomment to try): -->
-<!-- ![Green animate](./profile-3d-contrib/profile-green-animate.svg) -->
-<!-- ![Season](./profile-3d-contrib/profile-season-animate.svg) -->
-<!-- ![Night rainbow](./profile-3d-contrib/profile-night-rainbow.svg) -->
-<!-- ![Gitblock (Minecraft-style!)](./profile-3d-contrib/profile-gitblock.svg) -->
+<!-- Alternative: Ocean-themed GIF with orange snake (uncomment to swap) -->
+<!-- <img src="dist/ocean.gif" alt="ocean snake animation" width="100%" /> -->
 
 <!-- ═══════════════════════════════════════════════════════ -->
 <!-- WIDGET 4: Goodreads — auto-updated reading list       -->
