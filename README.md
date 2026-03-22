@@ -54,7 +54,6 @@
 ## Currently Reading 📚
 
 <!-- GOODREADS:START -->
-- [Scaling People: Tactics for Management and Company Building](https://www.goodreads.com/review/show/8429293894?utm_medium=api&utm_source=rss)
 - [Designing Data-Intensive Applications](https://www.goodreads.com/review/show/7270023403?utm_medium=api&utm_source=rss)
 <!-- GOODREADS:END -->
 
