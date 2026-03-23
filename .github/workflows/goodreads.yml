@@ -2,7 +2,7 @@ name: Update Goodreads Reading List
 
 on:
   schedule:
-    - cron: "0 0 * * 0" # weekly on Sunday
+    - cron: "0 0 * * *" # weekly on Sunday
   workflow_dispatch: # manual trigger
 
 permissions:
