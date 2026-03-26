@@ -54,7 +54,7 @@
 ## Currently Reading 📚
 
 <!-- GOODREADS:START -->
-- [Staff Engineer: Leadership Beyond the Management Track](https://www.goodreads.com/review/show/6195667403?utm_medium=api&utm_source=rss)
+- [Twelve Months &lpar;The Dresden Files, #18&rpar;](https://www.goodreads.com/review/show/5313130200?utm_medium=api&utm_source=rss)
 - [Designing Data-Intensive Applications](https://www.goodreads.com/review/show/7270023403?utm_medium=api&utm_source=rss)
 <!-- GOODREADS:END -->
 
