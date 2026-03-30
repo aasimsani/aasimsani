@@ -58,6 +58,11 @@
 - [Designing Data-Intensive Applications](https://www.goodreads.com/review/show/7270023403?utm_medium=api&utm_source=rss)
 <!-- GOODREADS:END -->
 
+## Recently Read 📖
+
+<!-- GOODREADS_READ:START -->
+<!-- GOODREADS_READ:END -->
+
 <!-- ═══════════════════════════════════════════════════════ -->
 <!-- BONUS: Capsule Render footer wave                     -->
 <!-- ═══════════════════════════════════════════════════════ -->
