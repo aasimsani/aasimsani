@@ -60,11 +60,11 @@
 ## Recently Read 📖
 
 <!-- GOODREADS_READ:START -->
+- [Dead Beat &lpar;The Dresden Files, #7&rpar;](https://www.goodreads.com/review/show/5313127171?utm_medium=api&utm_source=rss)
 - [Blood Rites &lpar;The Dresden Files, #6&rpar;](https://www.goodreads.com/review/show/5313127118?utm_medium=api&utm_source=rss)
 - [Death Masks &lpar;The Dresden Files, #5&rpar;](https://www.goodreads.com/review/show/5313126903?utm_medium=api&utm_source=rss)
 - [Grave Peril &lpar;The Dresden Files, #3&rpar;](https://www.goodreads.com/review/show/5313126806?utm_medium=api&utm_source=rss)
 - [Summer Knight &lpar;The Dresden Files, #4&rpar;](https://www.goodreads.com/review/show/5313126972?utm_medium=api&utm_source=rss)
-- [Fool Moon &lpar;The Dresden Files, #2&rpar;](https://www.goodreads.com/review/show/5313126610?utm_medium=api&utm_source=rss)
 <!-- GOODREADS_READ:END -->
 
 <!-- ═══════════════════════════════════════════════════════ -->
