@@ -61,11 +61,11 @@
 ## Recently Read 📖
 
 <!-- GOODREADS_READ:START -->
-- [Storm Front &lpar;The Dresden Files, #1&rpar;](https://www.goodreads.com/review/show/3556019801?utm_medium=api&utm_source=rss)
-- [Staff Engineer: Leadership Beyond the Management Track](https://www.goodreads.com/review/show/6195667403?utm_medium=api&utm_source=rss)
-- [Scaling People: Tactics for Management and Company Building](https://www.goodreads.com/review/show/8429293894?utm_medium=api&utm_source=rss)
-- [Beware of Chicken 5 &lpar;Beware of Chicken, #5&rpar;](https://www.goodreads.com/review/show/8441090300?utm_medium=api&utm_source=rss)
-- [Beware of Chicken 4 &lpar;Beware of Chicken, #4&rpar;](https://www.goodreads.com/review/show/8441089849?utm_medium=api&utm_source=rss)
+- [Blood Rites &lpar;The Dresden Files, #6&rpar;](https://www.goodreads.com/review/show/5313127118?utm_medium=api&utm_source=rss)
+- [Death Masks &lpar;The Dresden Files, #5&rpar;](https://www.goodreads.com/review/show/5313126903?utm_medium=api&utm_source=rss)
+- [Grave Peril &lpar;The Dresden Files, #3&rpar;](https://www.goodreads.com/review/show/5313126806?utm_medium=api&utm_source=rss)
+- [Summer Knight &lpar;The Dresden Files, #4&rpar;](https://www.goodreads.com/review/show/5313126972?utm_medium=api&utm_source=rss)
+- [Fool Moon &lpar;The Dresden Files, #2&rpar;](https://www.goodreads.com/review/show/5313126610?utm_medium=api&utm_source=rss)
 <!-- GOODREADS_READ:END -->
 
 <!-- ═══════════════════════════════════════════════════════ -->
