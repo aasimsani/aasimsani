@@ -61,11 +61,11 @@
 ## Recently Read 📖
 
 <!-- GOODREADS_READ:START -->
-- [Dead Beat &lpar;The Dresden Files, #7&rpar;](https://www.goodreads.com/review/show/5313127171?utm_medium=api&utm_source=rss)
-- [Blood Rites &lpar;The Dresden Files, #6&rpar;](https://www.goodreads.com/review/show/5313127118?utm_medium=api&utm_source=rss)
-- [Death Masks &lpar;The Dresden Files, #5&rpar;](https://www.goodreads.com/review/show/5313126903?utm_medium=api&utm_source=rss)
-- [Grave Peril &lpar;The Dresden Files, #3&rpar;](https://www.goodreads.com/review/show/5313126806?utm_medium=api&utm_source=rss)
-- [Summer Knight &lpar;The Dresden Files, #4&rpar;](https://www.goodreads.com/review/show/5313126972?utm_medium=api&utm_source=rss)
+- [Ghost Story &lpar;The Dresden Files, #13&rpar;](https://www.goodreads.com/review/show/5313129030?utm_medium=api&utm_source=rss)
+- [Side Jobs &lpar;The Dresden Files, #12.5&rpar;](https://www.goodreads.com/review/show/5313130294?utm_medium=api&utm_source=rss)
+- [Changes &lpar;The Dresden Files, #12&rpar;](https://www.goodreads.com/review/show/5313128851?utm_medium=api&utm_source=rss)
+- [Turn Coat &lpar;The Dresden Files, #11&rpar;](https://www.goodreads.com/review/show/5313128564?utm_medium=api&utm_source=rss)
+- [Backup &lpar;The Dresden Files, #10.5&rpar;](https://www.goodreads.com/review/show/5313128164?utm_medium=api&utm_source=rss)
 <!-- GOODREADS_READ:END -->
 
 <!-- ═══════════════════════════════════════════════════════ -->
