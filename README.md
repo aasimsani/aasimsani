@@ -60,11 +60,11 @@
 ## Recently Read 📖
 
 <!-- GOODREADS_READ:START -->
+- [Cold Days &lpar;The Dresden Files, #14&rpar;](https://www.goodreads.com/review/show/5313129166?utm_medium=api&utm_source=rss)
 - [Ghost Story &lpar;The Dresden Files, #13&rpar;](https://www.goodreads.com/review/show/5313129030?utm_medium=api&utm_source=rss)
 - [Side Jobs &lpar;The Dresden Files, #12.5&rpar;](https://www.goodreads.com/review/show/5313130294?utm_medium=api&utm_source=rss)
 - [Changes &lpar;The Dresden Files, #12&rpar;](https://www.goodreads.com/review/show/5313128851?utm_medium=api&utm_source=rss)
 - [Turn Coat &lpar;The Dresden Files, #11&rpar;](https://www.goodreads.com/review/show/5313128564?utm_medium=api&utm_source=rss)
-- [Backup &lpar;The Dresden Files, #10.5&rpar;](https://www.goodreads.com/review/show/5313128164?utm_medium=api&utm_source=rss)
 <!-- GOODREADS_READ:END -->
 
 <!-- ═══════════════════════════════════════════════════════ -->
