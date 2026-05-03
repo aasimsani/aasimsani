@@ -54,6 +54,7 @@
 ## Currently Reading 📚
 
 <!-- GOODREADS:START -->
+- [Peace Talks &lpar;The Dresden Files, #16&rpar;](https://www.goodreads.com/review/show/5310516010?utm_medium=api&utm_source=rss)
 - [Designing Data-Intensive Applications](https://www.goodreads.com/review/show/7270023403?utm_medium=api&utm_source=rss)
 <!-- GOODREADS:END -->
 
