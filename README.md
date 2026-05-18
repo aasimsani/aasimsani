@@ -54,6 +54,7 @@
 ## Currently Reading 📚
 
 <!-- GOODREADS:START -->
+- [The City of Brass &lpar;The Daevabad Trilogy, #1&rpar;](https://www.goodreads.com/review/show/8611812010?utm_medium=api&utm_source=rss)
 - [Designing Data-Intensive Applications](https://www.goodreads.com/review/show/7270023403?utm_medium=api&utm_source=rss)
 <!-- GOODREADS:END -->
 
