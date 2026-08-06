@@ -27,7 +27,13 @@ jobs:
         run: |
           END_DATE=$(date +"%b %Y")
           START_DATE=$(date -d "1 year ago" +"%b %Y" 2>/dev/null || date -v-1y +"%b %Y")
-          sed -i "s|<!-- SNAKE_DATES:START -->.*<!-- SNAKE_DATES:END -->|<!-- SNAKE_DATES:START --><sub>${START_DATE} – ${END_DATE}</sub><!-- SNAKE_DATES:END -->|" README.md
+          # perl -0 slurps the file: the marker block spans multiple lines, so a
+          # line-based sed never matches it.
+          perl -0pi -e "s|<!-- SNAKE_DATES:START -->.*?<!-- SNAKE_DATES:END -->|<!-- SNAKE_DATES:START --><sub>${START_DATE} – ${END_DATE}</sub><!-- SNAKE_DATES:END -->|s" README.md
+          grep -q "SNAKE_DATES:START --><sub>${START_DATE}" README.md || {
+            echo "::error::SNAKE_DATES markers not found in README.md"
+            exit 1
+          }
 
       - name: Commit & Push
         run: |
