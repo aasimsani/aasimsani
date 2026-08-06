@@ -25,5 +25,9 @@ jobs:
         uses: gautamkrishnar/blog-post-workflow@v1
         with:
           comment_tag_name: "GOODREADS_READ"
-          feed_list: "https://www.goodreads.com/review/list_rss/67959119?shelf=read&sort=date_read"
+          # order=d makes Goodreads return the feed sorted by date read, and
+          # disable_sort keeps that order. The action's own sort uses pubDate,
+          # which is when the review row was last touched, not when it was read.
+          feed_list: "https://www.goodreads.com/review/list_rss/67959119?shelf=read&sort=date_read&order=d"
+          disable_sort: true
           max_post_count: 5
