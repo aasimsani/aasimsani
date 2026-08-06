@@ -2,7 +2,9 @@ name: Generate Snake Animation
 
 on:
   schedule:
-    - cron: "0 0 * * 0"
+    # daily at 02:30 UTC — off the hour so it does not race the hourly
+    # Goodreads job, which also pushes to main
+    - cron: "30 2 * * *"
   workflow_dispatch: # manual trigger
 
 jobs:
