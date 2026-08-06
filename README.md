@@ -59,11 +59,11 @@
 ## Recently Read 📖
 
 <!-- GOODREADS_READ:START -->
-- [Aristotle and Dante Dive into the Waters of the World &lpar;Aristotle and Dante, #2&rpar;](https://www.goodreads.com/review/show/6774000784?utm_medium=api&utm_source=rss)
 - [Twelve Months &lpar;The Dresden Files, #18&rpar;](https://www.goodreads.com/review/show/5313130200?utm_medium=api&utm_source=rss)
 - [Battle Ground &lpar;The Dresden Files, #17&rpar;](https://www.goodreads.com/review/show/5313129568?utm_medium=api&utm_source=rss)
 - [Peace Talks &lpar;The Dresden Files, #16&rpar;](https://www.goodreads.com/review/show/5310516010?utm_medium=api&utm_source=rss)
 - [Skin Game &lpar;The Dresden Files, #15&rpar;](https://www.goodreads.com/review/show/5313129324?utm_medium=api&utm_source=rss)
+- [Cold Days &lpar;The Dresden Files, #14&rpar;](https://www.goodreads.com/review/show/5313129166?utm_medium=api&utm_source=rss)
 <!-- GOODREADS_READ:END -->
 
 <!-- ═══════════════════════════════════════════════════════ -->
