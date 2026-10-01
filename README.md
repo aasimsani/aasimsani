@@ -41,7 +41,7 @@
 </picture>
 
 <p align="right">
-  <!-- SNAKE_DATES:START --><sub>Sep 2025 – Sep 2026</sub><!-- SNAKE_DATES:END -->
+  <!-- SNAKE_DATES:START --><sub>Oct 2025 – Oct 2026</sub><!-- SNAKE_DATES:END -->
 </p>
 
 <!-- ═══════════════════════════════════════════════════════ -->
