@@ -3,9 +3,11 @@
 Usage (macOS, for the Apple Color Emoji font):
   uv run --no-project --with pillow python scripts/tagline_gif.py dist/tagline.gif
 
-The timing copies the hero name's anime.js call in the site's Hero.astro:
+The effect copies the hero name's anime.js call in the site's Hero.astro:
 scrambleText({ chars: "blocks", from: "center", perturbation: 0.4, revealRate: 9,
-settleDuration: 700 }), which refreshes its noise glyphs 30 times a second.
+settleDuration: 700 }), which refreshes its noise glyphs 30 times a second. The
+README version runs about twice as fast (revealRate 20, settleDuration 350), because
+a rotating tagline that plays at the site's pace felt slow.
 """
 
 import math
@@ -21,7 +23,7 @@ LINES = ["2x Founder 🚀", "Building Taxwire 💰", "Foodie 🍜", "Bookworm �
 W, H = 648, 60
 SIZE, BASELINE = 28, 40
 FRAME_MS = 40
-HOLD_MS, GAP_MS = 1600, 250
+HOLD_MS, GAP_MS = 600, 60
 CREAM, SKY_TOP, SKY_BOT = (236, 228, 212), (11, 15, 36), (43, 23, 64)
 BLOCKS = [chr(c) for c in range(0x2580, 0x25A0)]
 GEIST_URL = "https://github.com/google/fonts/raw/main/ofl/geist/Geist%5Bwght%5D.ttf"
@@ -118,8 +120,8 @@ def main(out):
 
         # The line decodes in from the center, holds, then dissolves out from its edges.
         phases = [
-            (scramble_times(len(chars), rng, 9, 700, 0.4), "in"),
-            (scramble_times(len(chars), rng, 30, 300, 0.4, reverse=True), "out"),
+            (scramble_times(len(chars), rng, 20, 350, 0.4), "in"),
+            (scramble_times(len(chars), rng, 90, 100, 0.4, reverse=True), "out"),
         ]
         for (duration, step, times), kind in phases:
             last_step = -1
@@ -149,7 +151,13 @@ def main(out):
                 durations[-1] = HOLD_MS
         durations[-1] = GAP_MS
 
-    pal = [f.quantize(colors=255, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE) for f in frames]
+    # Every frame shares one palette. Pillow's optimizer reuses pixels from the previous
+    # frame by palette index, so per-frame palettes would paint those pixels the wrong color.
+    sample = Image.new("RGB", (W, H * len(frames)))
+    for i, f in enumerate(frames):
+        sample.paste(f, (0, H * i))
+    palette = sample.quantize(colors=255, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE)
+    pal = [f.quantize(palette=palette, dither=Image.Dither.NONE) for f in frames]
     pal[0].save(out, save_all=True, append_images=pal[1:], duration=durations, loop=0, optimize=True)
     print(f"{len(frames)} frames, {Path(out).stat().st_size / 1e6:.2f} MB")
 

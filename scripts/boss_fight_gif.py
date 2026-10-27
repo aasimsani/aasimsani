@@ -22,8 +22,8 @@ from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
-W, H, SCALE = 216, 56, 3
-ROAD = 44
+W, H, SCALE = 216, 36, 3
+ROAD = 31
 # The site steps its world once per 60 Hz frame. The GIF keeps every third step
 # at 50 ms, which plays at the site's speed in a third of the frames.
 STEPS_PER_FRAME, FRAME_MS = 3, 50
@@ -261,11 +261,11 @@ def render(site, out):
             tw = math.sin(time * 0.05 * ss + sp_)
             if tw > -0.2:
                 cv.px((sx - cam * 0.06) % W, sy, COL["star"], alpha=0.3 + 0.5 * tw * tw)
-        cv.glow(W - 20, 12, 22, 0.12, "#c8beff")
+        cv.glow(W - 20, 9, 22, 0.12, "#c8beff")
         yy, xx = np.mgrid[0:H, 0:W]
-        cv.a[np.hypot(xx + 0.5 - (W - 20), yy + 0.5 - 12) < 6.5] = rgb(COL["moon"])
+        cv.a[np.hypot(xx + 0.5 - (W - 20), yy + 0.5 - 9) < 6.5] = rgb(COL["moon"])
         for dx, dy, s in ((-3, -1, 3), (2, 3, 2), (3, -4, 2)):
-            cv.px(W - 20 + dx, 12 + dy, COL["far"], s, s, alpha=0.35)
+            cv.px(W - 20 + dx, 9 + dy, COL["far"], s, s, alpha=0.35)
         span = 9 * 44
         for tx, tw_, th, wins in towers:
             x = (tx - cam * 0.3) % span - 30
@@ -314,8 +314,12 @@ def render(site, out):
                 if e["alive"] and time % (3 if enraged else 7) == 0:
                     for _ in range(4 if enraged else 2):
                         row = js_round(top + rand.random() * len(frame))
+                        # The tear only shifts the strip the boss covers, like the engine's drawImage call.
+                        x0 = max(js_round(left - 2 - cam), 0)
+                        x1 = min(x0 + len(frame[0]) + 4, W)
                         if 0 <= row < H - 1:
-                            cv.a[row:row + 2] = np.roll(cv.a[row:row + 2], js_round((rand.random() - 0.5) * (8 if enraged else 4)), axis=1)
+                            strip = cv.a[row:row + 2, x0:x1]
+                            strip[:] = np.roll(strip, js_round((rand.random() - 0.5) * (8 if enraged else 4)), axis=1)
                 if e["telegraph"]:
                     cv.px(e["x"], top - 6, COL["fx"], 1, 3)
 
@@ -387,10 +391,12 @@ def render(site, out):
             g.text((12, 10), hud["note"], font=font, fill=COL["teal"])
         if hud["sayFor"] and enemies[-1]["alive"]:
             text = hud["say"].encode("ascii", "ignore").decode().strip(" -")
-            x1 = (enemies[-1]["x"] - cam) * SCALE + 30
-            x0 = x1 - g.textlength(text, font=font) - 16
-            g.rectangle((x0, 54, x1, 76), fill=COL["text"])
-            g.text((x0 + 8, 58), text, font=font, fill=COL["bg"])
+            # The bubble sits right of the boss, clear of the HUD and the hero, and stays inside the frame.
+            width = g.textlength(text, font=font) + 16
+            x0 = min((enemies[-1]["x"] - cam) * SCALE + 54, W * SCALE - 8 - width)
+            x1 = x0 + width
+            g.rectangle((x0, 40, x1, 62), fill=COL["text"])
+            g.text((x0 + 8, 44), text, font=font, fill=COL["bg"])
         return img
 
     font_path = Path(tempfile.gettempdir()) / "Silkscreen-Regular.ttf"
@@ -403,9 +409,16 @@ def render(site, out):
     while after < 30:
         for _ in range(STEPS_PER_FRAME):
             step()
-        frames.append(draw().quantize(colors=255, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE))
+        frames.append(draw())
         if not enemies[-1]["alive"] and abs(hero["x"] - end_x) < 1:
             after += 1
+    # Every frame shares one palette. Pillow's optimizer reuses pixels from the previous
+    # frame by palette index, so per-frame palettes would paint those pixels the wrong color.
+    sample = Image.new("RGB", (W * SCALE, H * SCALE * 20))
+    for i, f in enumerate(frames[:: max(1, len(frames) // 20)][:20]):
+        sample.paste(f, (0, H * SCALE * i))
+    palette = sample.quantize(colors=255, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE)
+    frames = [f.quantize(palette=palette, dither=Image.Dither.NONE) for f in frames]
     frames[0].save(out, save_all=True, append_images=frames[1:], duration=FRAME_MS, loop=0, optimize=True, disposal=1)
     print(f"{len(frames)} frames, {Path(out).stat().st_size / 1e6:.1f} MB")
 
