@@ -1,31 +1,22 @@
-# Aasim Sani
-
-<!-- OPTION A: Capsule Render wave header (replace the # above with this) -->
-<!-- <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,100:16213e&height=200&section=header&text=Aasim%20Sani&fontSize=50&fontColor=ffffff&animation=fadeIn&fontAlignY=35" width="100%" /> -->
-
-<!-- OPTION B: Capsule Render cylinder header -->
-<!-- <img src="https://capsule-render.vercel.app/api?type=cylinder&color=0:1a1a2e,100:16213e&text=Aasim%20Sani&fontColor=ffffff&fontSize=40&height=150&fontAlignY=45&animation=scaleIn" width="100%" /> -->
-
-[![Website](https://img.shields.io/badge/aasimsani.net-000?style=flat&logo=safari&logoColor=white)](https://aasimsani.net)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/aasimsani)
-[![Twitter](https://img.shields.io/badge/@aasimsani-1DA1F2?style=flat&logo=twitter&logoColor=white)](https://twitter.com/aasimsani)
-
-<!-- ═══════════════════════════════════════════════════════ -->
-<!-- WIDGET 1: Typing SVG — animated rotating taglines     -->
-<!-- ═══════════════════════════════════════════════════════ -->
-
 <p align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com/?lines=2x+Founder+%F0%9F%9A%80;Building+Taxwire+%F0%9F%92%B0;Foodie+%F0%9F%8D%9C;Bookworm+%F0%9F%93%9A;Cyclist+%F0%9F%9A%B4;Occasionally+creating+stakeholder+value+%F0%9F%93%88&font=Fira+Code&center=true&width=550&height=45&color=36BCF7&duration=3000&pause=1000" alt="Typing SVG" />
-  </a>
+  <a href="https://aasimsani.net"><img alt="I'm Aasim Sani" src="dist/hero.svg" width="100%" /></a>
 </p>
 
-## About Me
+<!-- The bio mirrors the "Normal human" stop in aasimsani.github.io/src/data/hype.ts. -->
 
-- Founding Engineer at [Taxwire](https://taxwire.com) — building a sales tax engine
-- Previously co-founded [Orai](https://www.orai.com) (AI speech coach, 1M+ users, Forbes 30 Under 30) and [CopyCat](https://copycat-site.webflow.io/) (Figma → React, 20k+ users)
-- Into AI, philosophy, food and making complex things simple
-- Ex-professional cyclist, certified mountaineer, semi-pro gamer, occasional musician
+<p align="center">I'm the founding engineer at <a href="https://taxwire.com">Taxwire</a>, where we automate global sales tax compliance, saving finance teams time and money.</p>
+
+<p align="center">Before this I co-founded <a href="https://orai.com">Orai</a> (Techstars '18, <a href="https://www.forbes.com/30-under-30/2021/education/?profile=orai">Forbes 30 Under 30 in Education</a>), an AI public speaking coach that scaled to 1M+ users. I also co-founded <a href="https://copycat.dev">CopyCat</a>, a generative-AI Figma &rarr; React.js compiler that cut front-end build time by 80% for 20k+ developers. (OnDeck 14, VC-backed.)</p>
+
+<p align="center">Outside work: ex-pro cyclist, certified mountaineer. I read a lot (<a href="https://www.goodreads.com/user/show/67959119-aasim-sani">Goodreads</a>).</p>
+
+<p align="center">
+  <a href="https://aasimsani.net">Website</a> ·
+  <a href="https://aasimsani.net/blog/">Blog</a> ·
+  <a href="https://aasimsani.net/resume.pdf">Resume</a> ·
+  <a href="https://www.linkedin.com/in/aasimsani/">LinkedIn</a> ·
+  <a href="https://twitter.com/aasimsani">X</a>
+</p>
 
 <!-- ═══════════════════════════════════════════════════════ -->
 <!-- WIDGET 2: Snake animation — eats your contribution    -->
