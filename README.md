@@ -11,13 +11,12 @@
 [![Twitter](https://img.shields.io/badge/@aasimsani-1DA1F2?style=flat&logo=twitter&logoColor=white)](https://twitter.com/aasimsani)
 
 <!-- ═══════════════════════════════════════════════════════ -->
-<!-- WIDGET 1: Typing SVG — animated rotating taglines     -->
+<!-- WIDGET 1: Taglines dissolving out of block glyphs   -->
+<!-- like the website's name. scripts/tagline_gif.py      -->
 <!-- ═══════════════════════════════════════════════════════ -->
 
 <p align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com/?lines=2x+Founder+%F0%9F%9A%80;Building+Taxwire+%F0%9F%92%B0;Foodie+%F0%9F%8D%9C;Bookworm+%F0%9F%93%9A;Cyclist+%F0%9F%9A%B4;Occasionally+creating+stakeholder+value+%F0%9F%93%88&font=Geist&weight=600&center=true&width=550&height=45&color=FF9A3C&duration=3000&pause=1000" alt="Typing SVG" />
-  </a>
+  <img alt="2x Founder, Building Taxwire, Foodie, Bookworm, Cyclist, Occasionally creating stakeholder value" src="dist/tagline.gif" width="100%" />
 </p>
 
 ## About Me
@@ -69,7 +68,8 @@ GOODREADS_READ:END
 -->
 
 <!-- ═══════════════════════════════════════════════════════ -->
-<!-- BONUS: Capsule Render footer wave                     -->
+<!-- BONUS: the website's After-hours boss fight          -->
+<!-- scripts/boss_fight_gif.py                             -->
 <!-- ═══════════════════════════════════════════════════════ -->
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2a4a7f,100:1a6fb5&height=120&section=footer" width="100%" />
+<img alt="A pixel wanderer fighting the mini-bosses from aasimsani.net, then the AI Slop PR" src="dist/boss-fight.gif" width="100%" />
