@@ -22,7 +22,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
-W, H, SCALE = 216, 36, 3
+W, H, SCALE = 324, 36, 2
 ROAD = 31
 # The site steps its world once per 60 Hz frame. The GIF keeps every third step
 # at 50 ms, which plays at the site's speed in a third of the frames.
@@ -256,7 +256,7 @@ def render(site, out):
 
     def draw():
         cv = Canvas(sky)
-        cam = hero["x"] - 64 + ((rand.random() - 0.5) * shake if shake else 0)
+        cam = hero["x"] - 96 + ((rand.random() - 0.5) * shake if shake else 0)
         for sx, sy, sp_, ss in stars:
             tw = math.sin(time * 0.05 * ss + sp_)
             if tw > -0.2:
@@ -384,19 +384,19 @@ def render(site, out):
         img = Image.fromarray(cv.a.clip(0, 255).astype(np.uint8)).resize((W * SCALE, H * SCALE), Image.Resampling.NEAREST)
         g = ImageDraw.Draw(img)
         if hud["name"]:
-            g.text((12, 10), hud["name"], font=font, fill=COL["accent"])
+            g.text((10, 5), hud["name"], font=font, fill=COL["accent"])
             for i in range(hud["max"]):
-                g.rectangle((12 + i * 12, 30, 21 + i * 12, 36), fill=COL["accent"] if i < hud["hp"] else COL["far"], outline=COL["accent"])
+                g.rectangle((10 + i * 10, 22, 17 + i * 10, 26), fill=COL["accent"] if i < hud["hp"] else COL["far"], outline=COL["accent"])
         if hud["noteFor"]:
-            g.text((12, 10), hud["note"], font=font, fill=COL["teal"])
+            g.text((10, 5), hud["note"], font=font, fill=COL["teal"])
         if hud["sayFor"] and enemies[-1]["alive"]:
             text = hud["say"].encode("ascii", "ignore").decode().strip(" -")
             # The bubble sits right of the boss, clear of the HUD and the hero, and stays inside the frame.
             width = g.textlength(text, font=font) + 16
-            x0 = min((enemies[-1]["x"] - cam) * SCALE + 54, W * SCALE - 8 - width)
+            x0 = min((enemies[-1]["x"] - cam) * SCALE + 40, W * SCALE - 8 - width)
             x1 = x0 + width
-            g.rectangle((x0, 40, x1, 62), fill=COL["text"])
-            g.text((x0 + 8, 44), text, font=font, fill=COL["bg"])
+            g.rectangle((x0, 4, x1, 24), fill=COL["text"])
+            g.text((x0 + 8, 7), text, font=font, fill=COL["bg"])
         return img
 
     font_path = Path(tempfile.gettempdir()) / "Silkscreen-Regular.ttf"
