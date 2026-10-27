@@ -24,11 +24,51 @@ RAMP = ["#10152e", "#2a4a3a", "#3f6e5a", "#569a6f", "#6fae7f"]
 SNAKE, HEAD = "#ff9a3c", "#ffe0a8"
 LEVELS = {"NONE": 0, "FIRST_QUARTILE": 1, "SECOND_QUARTILE": 2, "THIRD_QUARTILE": 3, "FOURTH_QUARTILE": 4}
 
-# "GRID · AFTER HOURS · LV.52" in Silkscreen 12px with 0.04em tracking, converted
-# to outlines with fontTools so the SVG needs no webfont.
-CAPTION = (
-    "M3 -6V-7.5H7.5V-6ZM1.5 -1.5V-6H3V-1.5ZM6 -1.5V-3H4.5V-4.5H7.5V-1.5ZM3 0V-1.5H6V0ZM10.98 0V-7.5H15.48V-6H16.98V-4.5H15.48V-1.5H16.98V0H15.48V-1.5H13.98V-3H12.48V0ZM12.48 -4.5H15.42V-6H12.48ZM20.46 0V-7.5H21.96V0ZM25.44 0V-7.5H29.94V-6H31.44V-1.5H29.94V0ZM26.94 -1.5H29.88V-6H26.94ZM41.4 -3V-4.5H42.9V-3ZM51.36 0V-6H52.86V-7.5H55.86V-6H57.36V0H55.86V-3H52.86V0ZM52.86 -4.5H55.86V-6H52.86ZM60.84 0V-7.5H66.84V-6H62.34V-4.5H65.34V-3H62.34V0ZM71.82 0V-6H69.57V-7.5H75.57V-6H73.32V0ZM79.05 0V-7.5H85.05V-6H80.55V-4.5H83.55V-3H80.55V-1.5H85.05V0ZM88.53 0V-7.5H93.03V-6H94.53V-4.5H93.03V-1.5H94.53V0H93.03V-1.5H91.53V-3H90.03V0ZM90.03 -4.5H92.97V-6H90.03ZM103.5 0V-7.5H105V-4.5H108V-7.5H109.5V0H108V-3H105V0ZM114.48 -1.5V-6H115.98V-1.5ZM115.98 0V-1.5H118.98V0ZM115.98 -6V-7.5H118.98V-6ZM118.98 -1.5V-6H120.48V-1.5ZM123.96 -1.5V-7.5H125.46V-1.5ZM125.46 0V-1.5H128.46V0ZM128.46 -1.5V-7.5H129.96V-1.5ZM133.44 0V-7.5H137.94V-6H139.44V-4.5H137.94V-1.5H139.44V0H137.94V-1.5H136.44V-3H134.94V0ZM134.94 -4.5H137.88V-6H134.94ZM142.92 -1.5V-3H147.42V-1.5ZM144.42 -4.5V-6H148.92V-4.5ZM142.92 -4.5V-6H144.42V-4.5ZM142.92 0V-1.5H147.42V0ZM147.42 -1.5V-4.5H148.92V-1.5ZM144.42 -6V-7.5H148.92V-6ZM158.88 -3V-4.5H160.38V-3ZM168.84 0V-7.5H170.34V-1.5H174.84V0ZM179.82 -1.5V-3H181.32V-1.5ZM176.82 -3V-7.5H178.32V-3ZM181.32 -3V-7.5H182.82V-3ZM178.32 0V-1.5H179.82V0ZM178.32 -1.5V-3H179.82V-1.5ZM186.3 0V-1.5H187.8V0ZM191.28 0V-1.5H195.78V0ZM190.78 -4.5V-6H195.28V-4.5ZM189.78 -1.5V-3H191.28V-1.5ZM194.28 -3V-4.5H195.78V-3ZM189.28 -6V-7.5H195.78V-6ZM189.28 -4.5V-6H190.78V-4.5ZM198.76 0V-1.5H205.26V0ZM205.26 -3V-1.5H203.76V-3ZM203.76 -4.5V-3H202.26V-4.5ZM202.26 -6V-4.5H200.26V-6ZM200.76 -6V-7.5H205.26V-6ZM199.26 -4.5V-6H200.76V-4.5ZM205.26 -4.5V-6H206.76V-4.5Z"
-)
+# Silkscreen at 12px, converted to outlines with fontTools so the SVG needs no
+# webfont. Each entry is (advance width, path data at a baseline of 0).
+GLYPHS = {
+    'A': (9, 'M1.5 0V-6H3V-7.5H6V-6H7.5V0H6V-3H3V0ZM3 -4.5H6V-5.94H3Z'),
+    'B': (9, 'M1.5 0V-7.5H6V-6H7.5V-1.5H6V0ZM3 -4.5H5.94V-6H3ZM3 -1.5H5.94V-3H3Z'),
+    'C': (9, 'M6 -4.5V-6H3V-7.5H6V-6H7.5V-4.5ZM3 0V-1.5H1.5V-6H3V-1.5H6V0ZM6 -1.5V-3H7.5V-1.5Z'),
+    'D': (9, 'M1.5 0V-7.5H6V-6H7.5V-1.5H6V0ZM3 -1.5H5.94V-6H3Z'),
+    'E': (7.5, 'M1.5 0V-7.5H6V-6H3V-4.5H6V-3H3V-1.5H6V0Z'),
+    'F': (7.5, 'M1.5 0V-7.5H6V-6H3V-4.5H6V-3H3V0Z'),
+    'G': (9, 'M3 -6V-7.5H7.5V-6ZM1.5 -1.5V-6H3V-1.5ZM6 -1.5V-3H4.5V-4.5H7.5V-1.5ZM3 0V-1.5H6V0Z'),
+    'H': (9, 'M1.5 0V-7.5H3V-4.5H6V-7.5H7.5V0H6V-3H3V0Z'),
+    'I': (4.5, 'M1.5 0V-7.5H3V0Z'),
+    'J': (9, 'M6 -1.5V-7.5H7.5V-1.5ZM3 0V-1.5H1.5V-3H3V-1.5H6V0Z'),
+    'K': (9, 'M1.5 0V-7.5H3V-4.5H4.5V-3H6V-1.5H7.5V0H6V-1.5H4.5V-3H3V0ZM6 -6V-7.5H7.5V-6ZM4.5 -4.5V-6H6V-4.5Z'),
+    'L': (7.5, 'M1.5 0V-7.5H3V-1.5H6V0Z'),
+    'M': (10.5, 'M1.5 0V-7.5H3V-6H4.5V-4.5H6V-3H4.5V-4.5H3V0ZM7.5 0V-4.5H6V-6H7.5V-7.5H9V0Z'),
+    'N': (10.5, 'M1.5 0V-7.5H3V-6H4.5V-4.5H6V-3H7.5V-7.5H9V0H7.5V-1.5H6V-3H4.5V-4.5H3V0Z'),
+    'O': (9, 'M3 0V-1.5H1.5V-6H3V-7.5H6V-6H7.5V-1.5H6V0ZM3 -1.56H6V-5.94H3Z'),
+    'P': (9, 'M1.5 0V-7.5H6V-6H7.5V-4.5H6V-3H3V0ZM3 -4.5H5.94V-6H3Z'),
+    'Q': (9, 'M6 1.5V0H3V-1.5H1.5V-6H3V-7.5H6V-6H7.5V-1.5H6V0H7.5V1.5ZM3 -1.56H6V-5.94H3Z'),
+    'R': (9, 'M1.5 0V-7.5H6V-6H7.5V-4.5H6V-1.5H7.5V0H6V-1.5H4.5V-3H3V0ZM3 -4.5H5.94V-6H3Z'),
+    'S': (9, 'M3 -6V-7.5H7.5V-6ZM6 -1.5V-3H3V-4.5H1.5V-6H3V-4.5H6V-3H7.5V-1.5ZM1.5 0V-1.5H6V0Z'),
+    'T': (7.5, 'M3 0V-6H1.5V-7.5H6V-6H4.5V0Z'),
+    'U': (9, 'M3 0V-1.5H1.5V-7.5H3V-1.5H6V0ZM6 -1.5V-7.5H7.5V-1.5Z'),
+    'V': (10.5, 'M4.5 0V-1.5H3V-4.5H1.5V-7.5H3V-4.5H4.5V-1.5H6V0ZM7.5 -4.5V-7.5H9V-4.5ZM6 -1.5V-4.5H7.5V-1.5Z'),
+    'W': (10.5, 'M3 0V-1.5H1.5V-7.5H3V-1.5H4.5V0ZM7.5 -1.5V-7.5H9V-1.5ZM6 0V-1.5H4.5V-6H6V-1.5H7.5V0Z'),
+    'X': (10.5, 'M7.5 0V-1.5H6V-3H4.5V-4.5H3V-6H1.5V-7.5H3V-6H4.5V-4.5H6V-3H7.5V-1.5H9V0ZM6 -4.5V-6H7.5V-7.5H9V-6H7.5V-4.5ZM3 -1.5V-3H4.5V-1.5ZM1.5 0V-1.5H3V0Z'),
+    'Y': (10.5, 'M4.5 0V-4.5H3V-6H1.5V-7.5H3V-6H4.5V-4.5H6V0ZM7.5 -6V-7.5H9V-6ZM6 -4.5V-6H7.5V-4.5Z'),
+    'Z': (7.5, 'M4.5 -4.5V-6H1.5V-7.5H6V-4.5ZM3 -3V-4.5H4.5V-3ZM1.5 0V-3H3V-1.5H6V0Z'),
+    '0': (9, 'M3 0V-1.5H1.5V-6H3V-7.5H6V-6H7.5V-1.5H6V0ZM3 -1.56H6V-5.94H3Z'),
+    '1': (7.5, 'M1.5 0V-1.5H3V-6H1.5V-7.5H4.5V-1.5H6V0Z'),
+    '2': (9, 'M6 -4.5V-6H1.5V-7.5H6V-6H7.5V-4.5ZM3 -3V-4.5H6V-3ZM1.5 0V-3H3V-1.5H7.5V0Z'),
+    '3': (9, 'M6 -4.5V-6H1.5V-7.5H6V-6H7.5V-4.5ZM6 -1.5V-3H3V-4.5H6V-3H7.5V-1.5ZM1.5 0V-1.5H6V0Z'),
+    '4': (9, 'M4.5 0V-3H1.5V-7.5H3V-4.5H4.5V-7.5H6V-4.5H7.5V-3H6V0Z'),
+    '5': (9, 'M6 -1.5V-3H1.5V-7.5H7.5V-6H3V-4.5H6V-3H7.5V-1.5ZM1.5 0V-1.5H6V0Z'),
+    '6': (9, 'M3 0V-1.5H1.5V-6H3V-7.5H6V-6H3V-4.5H6V-3H7.5V-1.5H6V0ZM3 -1.56H6V-2.94H3Z'),
+    '7': (9, 'M3 0V-3H4.5V-4.5H6V-6H1.5V-7.5H7.5V-4.5H6V-3H4.5V0Z'),
+    '8': (9, 'M3 0V-1.5H1.5V-3H3V-4.5H1.5V-6H3V-7.5H6V-6H7.5V-4.5H6V-3H7.5V-1.5H6V0ZM3 -4.56H6V-5.94H3ZM3 -1.56H6V-2.94H3Z'),
+    '9': (9, 'M3 0V-1.5H6V-3H3V-4.5H1.5V-6H3V-7.5H6V-6H7.5V-1.5H6V0ZM3 -4.56H6V-5.94H3Z'),
+    ' ': (6, ''),
+    '·': (4.5, 'M1.5 -3V-4.5H3V-3Z'),
+    ',': (6, 'M3 0V-1.5H4.5V0ZM1.5 1.5V0H3V1.5Z'),
+    '-': (7.5, 'M1.5 -3V-4.5H6V-3Z'),
+}
+TRACKING = 0.48  # The artifact's caption uses 0.04em letter-spacing.
 
 # The 648x133 box reproduces the artifact's .snakebox.afterhours: 14/12/10 padding
 # around the 624x84 grid, an 8px caption gap and a 16.8px caption line.
@@ -36,11 +76,11 @@ W, H = 648, 133
 PX = f"0,8 8,8 8,0 {W - 8},0 {W - 8},8 {W},8 {W},{H - 8} {W - 8},{H - 8} {W - 8},{H} 8,{H} 8,{H - 8} 0,{H - 8}"
 
 QUERY = """query($login: String!) { user(login: $login) { contributionsCollection {
-  contributionCalendar { weeks { contributionDays { weekday contributionLevel } } } } } }"""
+  contributionCalendar { weeks { contributionDays { weekday contributionLevel contributionCount } } } } } }"""
 
 
 def fetch_weeks(login, token):
-    """Return the last 52 weeks as 7-slot lists of levels, with None for future days."""
+    """Return the last 52 weeks twice, as levels and as counts, with None for future days."""
     req = urllib.request.Request(
         "https://api.github.com/graphql",
         data=json.dumps({"query": QUERY, "variables": {"login": login}}).encode(),
@@ -50,13 +90,39 @@ def fetch_weeks(login, token):
         body = json.load(resp)
     if "errors" in body:
         sys.exit(f"GraphQL error: {body['errors']}")
-    weeks = []
+    weeks, counts = [], []
     for week in body["data"]["user"]["contributionsCollection"]["contributionCalendar"]["weeks"][-52:]:
         days: list[int | None] = [None] * ROWS
+        tally: list[int | None] = [None] * ROWS
         for day in week["contributionDays"]:
             days[day["weekday"]] = LEVELS[day["contributionLevel"]]
+            tally[day["weekday"]] = day["contributionCount"]
         weeks.append(days)
-    return weeks
+        counts.append(tally)
+    return weeks, counts
+
+
+def caption(counts):
+    """Summarize the days the grid shows: total, longest streak and best day."""
+    days = [n for week in counts for n in week if n is not None]
+    longest = run = 0
+    for n in days:
+        run = run + 1 if n else 0
+        longest = max(longest, run)
+    total = sum(days)
+    return (f"{total:,} CONTRIBUTION{'' if total == 1 else 'S'} · LONGEST STREAK {longest} "
+            f"DAY{'' if longest == 1 else 'S'} · BEST DAY {max(days):,}")
+
+
+def caption_path(text):
+    """Lay out text in the Silkscreen glyph table as one SVG path at a baseline of 0."""
+    x, parts = 0.0, []
+    for ch in text:
+        width, d = GLYPHS[ch]
+        if d:
+            parts.append(f'<path transform="translate({x:g} 0)" d="{d}"/>')
+        x += width + TRACKING
+    return "".join(parts)
 
 
 def period_s(n):
@@ -72,8 +138,8 @@ def pct(seconds, period):
     return f"{seconds / period * 100:.3f}%"
 
 
-def render(weeks):
-    """Build the SVG for a list of weeks, each a 7-slot list of levels or None."""
+def render(weeks, text=""):
+    """Build the SVG for a list of weeks, each a 7-slot list of levels or None, captioned with text."""
     path = []
     for c, week in enumerate(weeks):
         rows = range(ROWS) if c % 2 == 0 else reversed(range(ROWS))
@@ -112,7 +178,7 @@ def render(weeks):
         f'<g clip-path="url(#px)"><rect width="{W}" height="{H}" fill="url(#sky)"/>'
         f'<rect x="1" y="1" width="{W - 2}" height="{H - 2}" fill="none" stroke="#ffb347" stroke-width="2"/></g>',
         '<g transform="translate(12 14)">', *cells, *snake, "</g>",
-        f'<path transform="translate(12 119.08)" fill="#ffbe73" d="{CAPTION}"/>',
+        f'<g transform="translate(12 119.08)" fill="#ffbe73">{caption_path(text)}</g>',
         "</svg>",
     ])
 
@@ -120,4 +186,5 @@ def render(weeks):
 if __name__ == "__main__":
     login, out = sys.argv[1], sys.argv[2]
     with open(out, "w") as f:
-        f.write(render(fetch_weeks(login, os.environ["GITHUB_TOKEN"])))
+        weeks, counts = fetch_weeks(login, os.environ["GITHUB_TOKEN"])
+        f.write(render(weeks, caption(counts)))
