@@ -34,11 +34,7 @@
 
 ## Contributions
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="dist/dark-ocean.gif" />
-  <source media="(prefers-color-scheme: light)" srcset="dist/ocean.gif" />
-  <img alt="snake eating my contributions" src="dist/dark-ocean.gif" width="100%" />
-</picture>
+<img alt="snake eating my contributions" src="dist/afterhours-snake.svg" width="100%" />
 
 <p align="right">
   <!-- SNAKE_DATES:START --><sub>Aug 2025 – Aug 2026</sub><!-- SNAKE_DATES:END -->
@@ -49,22 +45,28 @@
 <!-- Requires GitHub Action (see .github/workflows)        -->
 <!-- ═══════════════════════════════════════════════════════ -->
 
+<!-- Hidden for now. HTML comments can't nest, so the GOODREADS marker comments
+are flattened to plain text below. To restore, delete this comment's opening and
+closing lines, wrap the four GOODREADS markers back in comment syntax, and
+re-enable the cron schedule in .github/workflows/goodreads.yml.
+
 ## Currently Reading 📚
 
-<!-- GOODREADS:START -->
+GOODREADS:START
 - [The City of Brass &lpar;The Daevabad Trilogy, #1&rpar;](https://www.goodreads.com/review/show/8611812010?utm_medium=api&utm_source=rss)
 - [Designing Data-Intensive Applications](https://www.goodreads.com/review/show/7270023403?utm_medium=api&utm_source=rss)
-<!-- GOODREADS:END -->
+GOODREADS:END
 
 ## Recently Read 📖
 
-<!-- GOODREADS_READ:START -->
+GOODREADS_READ:START
 - [Twelve Months &lpar;The Dresden Files, #18&rpar;](https://www.goodreads.com/review/show/5313130200?utm_medium=api&utm_source=rss)
 - [Battle Ground &lpar;The Dresden Files, #17&rpar;](https://www.goodreads.com/review/show/5313129568?utm_medium=api&utm_source=rss)
 - [Peace Talks &lpar;The Dresden Files, #16&rpar;](https://www.goodreads.com/review/show/5310516010?utm_medium=api&utm_source=rss)
 - [Skin Game &lpar;The Dresden Files, #15&rpar;](https://www.goodreads.com/review/show/5313129324?utm_medium=api&utm_source=rss)
 - [Cold Days &lpar;The Dresden Files, #14&rpar;](https://www.goodreads.com/review/show/5313129166?utm_medium=api&utm_source=rss)
-<!-- GOODREADS_READ:END -->
+GOODREADS_READ:END
+-->
 
 <!-- ═══════════════════════════════════════════════════════ -->
 <!-- BONUS: Capsule Render footer wave                     -->

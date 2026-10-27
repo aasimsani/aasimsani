@@ -1,8 +1,10 @@
 name: Update Goodreads Reading List
 
 on:
-  schedule:
-    - cron: "0 * * * *" # every hour
+  # The README section is commented out for now, so the hourly run would fail to
+  # find its GOODREADS markers.
+  # schedule:
+  #   - cron: "0 * * * *" # every hour
   workflow_dispatch: # manual trigger
 
 permissions:
