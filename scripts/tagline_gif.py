@@ -1,6 +1,6 @@
 """Render the README taglines with the website's block-glyph dissolve, as a looping GIF.
 
-Usage (macOS, for the Apple Color Emoji font):
+Usage:
   uv run --no-project --with pillow python scripts/tagline_gif.py dist/tagline.gif
 
 The effect copies the hero name's anime.js call in the site's Hero.astro:
@@ -17,7 +17,7 @@ import tempfile
 import urllib.request
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageColor, ImageDraw, ImageFont
 
 LINES = ["2x Founder 🚀", "Building Taxwire 💰", "Foodie 🍜", "Bookworm 📚", "Cyclist 🚴", "Occasionally creating stakeholder value 📈"]
 W, H = 648, 60
@@ -27,7 +27,115 @@ HOLD_MS, GAP_MS = 600, 60
 CREAM, SKY_TOP, SKY_BOT = (236, 228, 212), (11, 15, 36), (43, 23, 64)
 BLOCKS = [chr(c) for c in range(0x2580, 0x25A0)]
 GEIST_URL = "https://github.com/google/fonts/raw/main/ofl/geist/Geist%5Bwght%5D.ttf"
-EMOJI_FONT = "/System/Library/Fonts/Apple Color Emoji.ttc"
+
+# Pixel sprites stand in for the emoji. They use the same format as the site's
+# src/scripts/companion/sprites.ts: one character per pixel, "." transparent.
+SPRITE_PX = 2
+SPRITE_PAL = {
+    "o": "#0a0c18", "W": "#ece4d4", "w": "#bdb4cc", "T": "#5fd8c6", "t": "#2f8f84", "A": "#ff9a3c",
+    "Y": "#ffe08a", "R": "#d4364f", "G": "#c9a45a", "g": "#e8c98a", "K": "#3f6e5a", "B": "#9a7050",
+    "N": "#f2dca0", "L": "#0a66c2", "Q": "#9690b0",
+    # The cyclist is the site's wanderer, in its "Normal human" colors.
+    "C": "#2e3f74", "c": "#5070b8", "d": "#18203f", "f": "#06070f", "e": "#ffe08a", "s": "#d4364f",
+}
+SPRITES = {
+    "🚀": [
+        ".....oo.....",
+        "....oWWo....",
+        "...oWWWWo...",
+        "...oWTTWo...",
+        "...oWTtWo...",
+        "...oWWWWo...",
+        "...owWWWo...",
+        "..ooWWWWoo..",
+        ".oRowWWWoRo.",
+        ".oRRowWoRRo.",
+        ".oRo.oo.oRo.",
+        ".....AA.....",
+        "....AYYA....",
+        ".....AA.....",
+    ],
+    "💰": [
+        "....oooo....",
+        "...oGggGo...",
+        "....oGGo....",
+        "...ooGGoo...",
+        "..oGggGGGo..",
+        ".oGgGGGGGGo.",
+        ".oGGGKKGGGo.",
+        ".oGGKGGGGGo.",
+        ".oGGGKKGGGo.",
+        ".oGGGGGKGGo.",
+        ".oGGGKKGGGo.",
+        ".oGGGGGGGGo.",
+        "..oGGGGGGo..",
+        "...oooooo...",
+    ],
+    "🍜": [
+        "...w..w..w..",
+        "..w..w..w...",
+        "...w..w..w..",
+        "..w..w..w...",
+        "..........BB",
+        "........BB..",
+        "......BB....",
+        "oooooooooooo",
+        "oNYYNNNTNNNo",
+        "oRRRRRRRRRRo",
+        ".oRWRWRWRRo.",
+        ".oRRRRRRRRo.",
+        "..oRRRRRRo..",
+        "...oooooo...",
+    ],
+    "📚": [
+        "............",
+        "............",
+        "..oooooooo..",
+        "..oRRRRRRWo.",
+        "..oRAAAARWo.",
+        "..oooooooo..",
+        ".oooooooooo.",
+        ".oWTTTTTTTTo",
+        ".oWTttttTTTo",
+        ".oooooooooo.",
+        "oooooooooo..",
+        "oAAAAAAAAWo.",
+        "oAYYYAAAAWo.",
+        "oooooooooo..",
+    ],
+    "🚴": [
+        ".........oooo.....",
+        "........oCCCCo....",
+        "........oCffCo....",
+        "........ofefeo....",
+        "....ssssosssso....",
+        "........occcWW....",
+        "......ooodd.T.....",
+        "..QQQ..T.d..TQQQ..",
+        ".Q...Q.T.dTTQT..Q.",
+        "Q.....QT.T.Q.T...Q",
+        "Q..WTTTTWd.Q..W..Q",
+        "Q.....Q....Q.....Q",
+        ".Q...Q......Q...Q.",
+        "..QQQ........QQQ..",
+    ],
+    "📈": [
+        "............",
+        "oooooooooooo",
+        "oWWWWWWWWWAo",
+        "oWwWwWwWwAWo",
+        "oWWWWWWWAAWo",
+        "oWwWAwWAwWWo",
+        "oWWAWAAWWWWo",
+        "oWAWwWwWwWWo",
+        "oAWWWWWWWWWo",
+        "oWwWwWwWwWWo",
+        "oWWWWWWWWWWo",
+        "oooooooooooo",
+        "............",
+        "............",
+    ],
+}
 
 # Each block element as rectangles in eighths of its cell: (x0, y0, x1, y1).
 QUAD = {"ul": (0, 0, 4, 4), "ur": (4, 0, 8, 4), "ll": (0, 4, 4, 8), "lr": (4, 4, 8, 8)}
@@ -72,17 +180,19 @@ def scramble_times(n, rng, rate, settle, perturbation, reverse=False):
 def main(out):
     geist = ImageFont.truetype(fetch(GEIST_URL, "Geist-wght.ttf"), SIZE)
     geist.set_variation_by_axes([600])
-    emoji_font = ImageFont.truetype(EMOJI_FONT, 64)
     sky = Image.new("RGB", (W, H))
     for y in range(H):
         t = y / (H - 1)
         sky.paste(tuple(round(a + (b - a) * t) for a, b in zip(SKY_TOP, SKY_BOT)), (0, y, W, y + 1))
 
-    def emoji(ch):
-        im = Image.new("RGBA", (160, 160))
-        ImageDraw.Draw(im).text((0, 0), ch, font=emoji_font, embedded_color=True)
-        im = im.crop(im.getbbox())
-        return im.resize((round(im.width * 28 / im.height), 28), Image.Resampling.LANCZOS)
+    def sprite(ch):
+        rows = SPRITES[ch]
+        im = Image.new("RGBA", (len(rows[0]), len(rows)))
+        for y, row in enumerate(rows):
+            for x, k in enumerate(row):
+                if k != ".":
+                    im.putpixel((x, y), ImageColor.getrgb(SPRITE_PAL[k]))
+        return im.resize((im.width * SPRITE_PX, im.height * SPRITE_PX), Image.Resampling.NEAREST)
 
     def block(draw, ch, x, w):
         top, h = BASELINE - SIZE * 0.82, SIZE
@@ -99,7 +209,7 @@ def main(out):
     for li, line in enumerate(LINES):
         rng = random.Random(li + 1)
         chars = list(line)
-        glyphs = {ch: emoji(ch) for ch in chars if ord(ch) > 0x2000}
+        glyphs = {ch: sprite(ch) for ch in chars if ch in SPRITES}
         widths = [glyphs[ch].width + 4 if ch in glyphs else geist.getlength(ch) for ch in chars]
         x0 = (W - sum(widths)) / 2
         xs = [x0 + sum(widths[:i]) for i in range(len(chars))]
