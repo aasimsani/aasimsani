@@ -36,7 +36,7 @@
 <img alt="snake eating my contributions" src="dist/afterhours-snake.svg" width="100%" />
 
 <p align="right">
-  <!-- SNAKE_DATES:START --><sub>Oct 2025 – Oct 2026</sub><!-- SNAKE_DATES:END -->
+  <!-- SNAKE_DATES:START --><sub>Nov 2025 – Nov 2026</sub><!-- SNAKE_DATES:END -->
 </p>
 
 <!-- ═══════════════════════════════════════════════════════ -->
